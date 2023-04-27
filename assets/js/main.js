@@ -49,6 +49,95 @@ skillsHeader.forEach(el => {
    el.addEventListener('click', toggleSkills)
 })
 
+/*==================== QUALIFICATION TABS ====================*/
+const tabs = document.querySelectorAll('[data-target]'),
+   tabContents = document.querySelectorAll('[data-content]')
+
+tabs.forEach(tab => {
+   /* Cria um evento click em cada uma das tabs */
+   tab.addEventListener('click', () => {
+      /* Selecioina a lista respeciva da tab que foi clicada (#education ou #work) */
+      const target = document.querySelector(tab.dataset.target)
+
+      /* remove de todas as listas o active */
+      tabContents.forEach(tabContent => {
+         tabContent.classList.remove('qualification__active')
+      })
+
+      /* Adiciona na lista que foi clica o active  */
+      target.classList.add('qualification__active')
+
+      /* remove de todas as tab o active */
+      tabs.forEach(tab => {
+         tab.classList.remove('qualification__active')
+      })
+
+      /* Adiciona na tab clica o active */
+      tab.classList.add('qualification__active')
+   })
+})
+
+/*==================== SERVICES MODAL ====================*/
+const modalViews =
+      document.querySelectorAll('.services__modal') /* Todos os modais */,
+   modalBtns =
+      document.querySelectorAll(
+         '.services__button'
+      ) /* Todos botoes de abrir os modais */,
+   modalCloses = document.querySelectorAll(
+      '.services__modal-close'
+   ) /* todos os botões de fechar os modais */
+
+let modal = function (modalclick) {
+   modalViews[modalclick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+   modalBtn.addEventListener('click', () => {
+      modal(i)
+   })
+})
+
+modalCloses.forEach(modalCLose => {
+   modalCLose.addEventListener('click', () => {
+      modalViews.forEach(modalView => {
+         modalView.classList.remove('active-modal')
+      })
+   })
+})
+
+/*==================== PORTFOLIO SWIPER  ====================*/
+let swiperPorfolio = new Swiper('.portfolio__container', {
+   cssMode: true,
+   loop: true,
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+   },
+})
+
+/*==================== TESTIMONIAL ====================*/
+let swiperTestimonial = new Swiper('.testimonal__container', {
+   loop: true,
+   grabCursor: true,
+   spaceBetween: 48,
+
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+   },
+
+   breakpoints:{
+      568:{
+         slidesPerView: 2,
+      }
+   }
+})
 
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
