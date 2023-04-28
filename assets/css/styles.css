@@ -785,6 +785,10 @@ img {
    width: 265px;
    border-radius: .5rem;
    justify-self: center;
+   box-shadow:
+  1.3px 1.3px 2.8px rgba(0, 0, 0, 0.04),
+  10px 10px 22px rgba(0, 0, 0, 0.08)
+;
 }
 
 
@@ -977,7 +981,7 @@ font-weight: 600;
 }
 
 .footer__title{
-   font-size: var(--h1-font-size);
+   font-size: var(--h2-font-size);
    margin-bottom: var(--mb-0-25);
 }
 
@@ -996,7 +1000,8 @@ font-weight: 600;
 }
 
 .footer__social{
-   font-size: 1.25rem;
+   font-size: 1.0rem;
+   margin-bottom: 10px;
    margin-right: var(--mb-1-5);
 }
 
@@ -1326,7 +1331,12 @@ font-weight: 600;
    }
 
    .footer__socials{
+      
+      display: flex;
+      flex-direction: column;
       justify-self: flex-end;
+      
+      
    }
 
    .footer__copy{
