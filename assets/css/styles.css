@@ -990,6 +990,12 @@ font-weight: 600;
    font-size: var(--small-font-size);
 }
 
+.footer__link_all{
+   display: flex;
+   flex-direction: column; 
+   row-gap: 1.5rem;
+}
+
 .footer__links{
    display: flex;
    flex-direction: column; 
@@ -1201,7 +1207,7 @@ font-weight: 600;
    .contact__container,
    .footer__container{
       grid-template-columns: repeat(2, 1fr);
-      margin-bottom: -40px;  /*****************/
+      /*margin-bottom: -40px;  ****************/
    }
 
    .qualification__sections{
