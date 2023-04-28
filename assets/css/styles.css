@@ -971,6 +971,7 @@ font-weight: 600;
 
 
 /*==================== FOOTER ====================*/
+
 .footer{
    padding-top: 2rem;
 }
@@ -993,17 +994,24 @@ font-weight: 600;
    display: flex;
    flex-direction: column; 
    row-gap: 1.5rem;
+   
 }
 
 .footer__link:hover{
    color: var(--first-color-lighter);
 }
 
+.footer__socials{
+   margin-block-start: 12px;
+} 
+
 .footer__social{
    font-size: 1.0rem;
-   margin-bottom: 10px;
-   margin-right: var(--mb-1-5);
-}
+   /* margin-right: var(--mb-1-5); */
+   /*margin-bottom: -15px;*/
+   margin-block-start: -12px;
+} 
+
 
 .footer__social:hover{
    color: var(--first-color-lighter);
@@ -1066,9 +1074,38 @@ font-weight: 600;
    background-color: var(--text-color-light);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px){
+@media screen and (max-width: 350px)
+{
    .container{
       margin-left: var(--mb-1);
       margin-right: var(--mb-1);
@@ -1130,7 +1167,17 @@ font-weight: 600;
    .testimonial__description{
       text-align: center;
    }
+
+
 }
+
+
+
+
+
+
+
+
 
 /* For medium devices */
 @media screen and (min-width: 568px){
@@ -1154,6 +1201,7 @@ font-weight: 600;
    .contact__container,
    .footer__container{
       grid-template-columns: repeat(2, 1fr);
+      margin-bottom: -40px;  /*****************/
    }
 
    .qualification__sections{
@@ -1161,7 +1209,16 @@ font-weight: 600;
       grid-template-columns: .6fr;
       justify-content: center;
    }
+   
 }
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 768px){
@@ -1331,18 +1388,37 @@ font-weight: 600;
    }
 
    .footer__socials{
-      
       display: flex;
       flex-direction: column;
       justify-self: flex-end;
+
       
-      
+
+
+
+
+      /*justify-self: flex-end;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      padding: 20px; */
    }
 
    .footer__copy{
       margin-top: 4.5rem;
    }
+   
+
 }
+
+
+
+
+
+
+
+
+
 
 /* For large devices */
 @media screen and (min-width: 1024px){
